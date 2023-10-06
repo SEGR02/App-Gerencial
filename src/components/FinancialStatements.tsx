@@ -25,7 +25,7 @@ const FinancialStatements: React.FC<ContainerProps> = () => {
   useEffect(() => {
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/EstadosFinancieros/ListasFechas?pTipo=C`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/EstadosFinancieros/ListasFechas?pTipo=C`,
         {},
         {
           headers: {
@@ -46,7 +46,7 @@ const FinancialStatements: React.FC<ContainerProps> = () => {
   useEffect(() => {
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/EstadosFinancieros/ConsultarEstadoFinanciero?pFecha=${selectedDate}&pNivel=1&pRedondeo=1000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/EstadosFinancieros/ConsultarEstadoFinanciero?pFecha=${selectedDate}&pNivel=1&pRedondeo=1000000`,
         {},
         {
           headers: {
@@ -62,7 +62,7 @@ const FinancialStatements: React.FC<ContainerProps> = () => {
 
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/EstadosFinancieros/ConsultarIndicadorFinanciero?pFecha=${selectedDate}`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/EstadosFinancieros/ConsultarIndicadorFinanciero?pFecha=${selectedDate}`,
         {},
         {
           headers: {

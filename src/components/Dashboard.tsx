@@ -81,7 +81,7 @@ const Dashboard: React.FC<ContainerProps> = () => {
   useEffect(() => {
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorCarteraAlaFecha?pRedondeo=1000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorCarteraAlaFecha?pRedondeo=1000000`,
         {},
         {
           headers: {
@@ -95,7 +95,7 @@ const Dashboard: React.FC<ContainerProps> = () => {
 
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorCarteraAlaFechaPorCategoria?pRedondeo=1000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorCarteraAlaFechaPorCategoria?pRedondeo=1000000`,
         {},
         {
           headers: {

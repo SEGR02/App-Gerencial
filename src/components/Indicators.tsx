@@ -60,7 +60,7 @@ const Indicators: React.FC<ContainerProps> = () => {
   useEffect(() => {
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/EstadosFinancieros/ListasFechas?pTipo=C`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/EstadosFinancieros/ListasFechas?pTipo=C`,
         {},
         {
           headers: {
@@ -81,7 +81,7 @@ const Indicators: React.FC<ContainerProps> = () => {
   useEffect(() => {
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorAsociados?pFecha=${selectedDate}`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorAsociados?pFecha=${selectedDate}`,
         {},
         {
           headers: {
@@ -103,7 +103,7 @@ const Indicators: React.FC<ContainerProps> = () => {
 
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorAportes?pFecha=${selectedDate}&pRedondeo=1000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorAportes?pFecha=${selectedDate}&pRedondeo=1000000`,
         {},
         {
           headers: {
@@ -125,7 +125,7 @@ const Indicators: React.FC<ContainerProps> = () => {
 
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorCartera?pFecha=${selectedDate}&pRedondeo=1000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorCartera?pFecha=${selectedDate}&pRedondeo=1000000`,
         {},
         {
           headers: {
@@ -147,7 +147,7 @@ const Indicators: React.FC<ContainerProps> = () => {
 
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorDepositos?pFecha=${selectedDate}&pRedondeo=1000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorDepositos?pFecha=${selectedDate}&pRedondeo=1000000`,
         {},
         {
           headers: {
@@ -169,7 +169,7 @@ const Indicators: React.FC<ContainerProps> = () => {
 
     axios
       .post(
-        `https://financialsoftware.com.co:456/RCOOPCAFAM/AppGerencial/Indicadores/IndicadorServicios?pFecha=${selectedDate}&pRedondeo=10000000`,
+        `https://enlinea.coopcafam.coop/APIS/APPGERENCIAL/Indicadores/IndicadorServicios?pFecha=${selectedDate}&pRedondeo=10000000`,
         {},
         {
           headers: {
