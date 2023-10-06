@@ -1,0 +1,91 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.logo-title {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form {
+  height: 50%;
+  width: 100%;
+}
+
+h1 {
+  color: #2261cf;
+}
+
+.ligth {
+  background-color: #fff !important;
+  color: #000;
+  --border-color: #2261cf;
+  --placeholder-color: #2261cf;
+  --placeholder-opacity: 1;
+  font-weight: bold;
+  width: 98%;
+}
+
+.custom-toggle {
+  margin-left: 20%;
+  color: #000;
+}
+
+ion-toggle:disabled {
+  --color-disabled: #c1c1c1;
+}
+
+toggle-icon {
+  background-color: #2261cf !important;
+}
+
+.remember-my-data {
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  background-color: #6db7f2;
+}
+
+.remember-me-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+ion-button.button-login {
+  --background: #f27933;
+  --background-hover: #f27933;
+  --background-activated: #f27933;
+  --background-focused: #f27933;
+  --color: #0752cf;
+  --ripple-color: #f27933;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  text-transform: capitalize;
+}
+
+@media (prefers-color-scheme: dark) {
+  ion-item::part(native) {
+    background: #fff;
+  }
+  /* ion-segment-button:not([checked]) { */
+  /* --ion-color-base: green; */
+  /* --ion-color-background: green; */
+  /* Agrega otros estilos personalizados aquí según tus preferencias */
+  /* } */
+
+  /* ion-segment-button[checked] { */
+  /* --ion-color-base: blue; */
+  /* --ion-color-background: blue; */
+  /* Agrega otros estilos personalizados aquí según tus preferencias */
+  /* } */
+}

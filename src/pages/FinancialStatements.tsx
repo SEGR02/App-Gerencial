@@ -1,11 +1,11 @@
 import { IonContent, IonPage } from "@ionic/react";
-import Login from "../components/Login";
+import FinancialStatements from "../components/FinancialStatements";
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <Login />
+        <FinancialStatements />
       </IonContent>
     </IonPage>
   );

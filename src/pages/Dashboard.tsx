@@ -1,11 +1,11 @@
 import { IonContent, IonPage } from "@ionic/react";
-import Login from "../components/Login";
+import Dashboard from "../components/Dashboard";
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <Login />
+        <Dashboard />
       </IonContent>
     </IonPage>
   );
