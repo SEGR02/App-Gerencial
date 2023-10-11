@@ -53,6 +53,7 @@ const options = {
 interface ContainerProps {}
 
 const Indicators: React.FC<ContainerProps> = () => {
+  const username = localStorage.getItem("name");
   const history = useHistory();
   const [selectedDate, setSelectedDate] = useState("");
   const [graphicAsociatesData, setGraphicAsociatesData] = useState<any>({});
@@ -63,6 +64,7 @@ const Indicators: React.FC<ContainerProps> = () => {
   const [graphicDepositsData, setGraphicDepositsData] = useState<any>({});
   const [graphicServicesData, setGraphicServicesData] = useState<any>({});
   const [availableDates, setAvailableDates] = useState<any>();
+  const [showLogOut, setShowLogOut] = useState<any>(false);
 
   useEffect(() => {
     axios
@@ -275,13 +277,23 @@ const Indicators: React.FC<ContainerProps> = () => {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <p style={{ marginBottom: 0 }}>
-                  <b>Hola, Juan Camilo</b>
+                  <b>Hola, {username}</b>
                 </p>
-                <img
-                  style={{ width: "22px", height: "22px" }}
-                  src={user}
-                  alt=""
-                />
+                <div onClick={() => setShowLogOut(!showLogOut)}>
+                  <img
+                    style={{ width: "22px", height: "22px" }}
+                    src={user}
+                    alt=""
+                  />
+                </div>
+                <div
+                  onClick={() => history.push("/home")}
+                  style={
+                    showLogOut ? { display: "block" } : { display: "none" }
+                  }
+                >
+                  Cerrar Sesion
+                </div>
               </div>
               <div className="header-company">
                 <p style={{ margin: 0, fontSize: "0.8em" }}>

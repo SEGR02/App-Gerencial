@@ -4,7 +4,7 @@ import "./Dashboard.css";
 import user from "../assets/user-profile.png";
 import documents from "../assets/document.png";
 import bars from "../assets/bar-chart.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { IonButton } from "@ionic/react";
 import {
   Chart as ChartJS,
@@ -48,8 +48,10 @@ interface ContainerProps {}
 
 const Dashboard: React.FC<ContainerProps> = () => {
   const username = localStorage.getItem("name");
+  const history = useHistory();
   const [cardsData, setCardsData] = useState<any>({});
   const [graphicData, setGraphicData] = useState<any>([]);
+  const [showLogOut, setShowLogOut] = useState<any>(false);
 
   const getGraphicData = () => {
     const result: any = [];
@@ -136,7 +138,18 @@ const Dashboard: React.FC<ContainerProps> = () => {
             <p style={{ marginBottom: 0 }}>
               <b>Hola, {CapitalizeString(username)}</b>
             </p>
-            <img style={{ width: "22px", height: "22px" }} src={user} alt="" />
+            <img
+              onClick={() => setShowLogOut(!showLogOut)}
+              style={{ width: "22px", height: "22px" }}
+              src={user}
+              alt=""
+            />
+            <div
+              onClick={() => history.push("/home")}
+              style={showLogOut ? { display: "block" } : { display: "none" }}
+            >
+              Cerrar Sesion
+            </div>
           </div>
           <div className="header-company">
             <p style={{ margin: 0, fontSize: "0.8em" }}>

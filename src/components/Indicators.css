@@ -37,3 +37,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.back-arrow {
+  width: 10vw;
+}

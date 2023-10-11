@@ -21,6 +21,7 @@ const FinancialStatements: React.FC<ContainerProps> = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [commonReason, setCommonReason] = useState();
   const [pastDuePortfolio, setPastDuePortfolio] = useState();
+  const [showLogOut, setShowLogOut] = useState<any>(false);
 
   useEffect(() => {
     axios
@@ -122,7 +123,18 @@ const FinancialStatements: React.FC<ContainerProps> = () => {
             <p style={{ marginBottom: 0 }}>
               <b>Hola, {username}</b>
             </p>
-            <img style={{ width: "22px", height: "22px" }} src={user} alt="" />
+            <img
+              onClick={() => setShowLogOut(!showLogOut)}
+              style={{ width: "22px", height: "22px" }}
+              src={user}
+              alt=""
+            />
+            <div
+              onClick={() => history.push("/home")}
+              style={showLogOut ? { display: "block" } : { display: "none" }}
+            >
+              Cerrar Sesion
+            </div>
           </div>
           <div className="header-company">
             <p style={{ margin: 0, fontSize: "0.8em" }}>
