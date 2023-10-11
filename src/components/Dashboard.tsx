@@ -27,18 +27,18 @@ const options = {
   scales: {
     x: {
       grid: {
-        display: false, // Oculta las rejillas verticales en el eje X
-      },
-      ticks: {
-        display: false, // Oculta los números y los meses en el eje X
+        display: false,
       },
     },
     y: {
       grid: {
-        display: true, // Muestra las rejillas horizontales en el eje Y
+        display: true,
       },
       ticks: {
-        display: false, // Oculta los números en el eje Y
+        display: true,
+        font: {
+          size: 10,
+        },
       },
     },
   },
@@ -65,8 +65,7 @@ const Dashboard: React.FC<ContainerProps> = () => {
     labels: getGraphicData().labels,
     datasets: [
       {
-        label: "Dataset 1",
-        data: getGraphicData().result, // Aquí puedes ajustar los valores de las barras
+        data: getGraphicData().result,
         backgroundColor: [
           "rgba(170, 170, 170, 0.95)",
           "rgba(119, 119, 119, 0.95)",
