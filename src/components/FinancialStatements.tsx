@@ -130,7 +130,10 @@ const FinancialStatements: React.FC<ContainerProps> = () => {
               alt=""
             />
             <div
-              onClick={() => history.push("/home")}
+              onClick={() => {
+                history.push("/home");
+                window.location.reload();
+              }}
               style={showLogOut ? { display: "block" } : { display: "none" }}
             >
               Cerrar Sesion

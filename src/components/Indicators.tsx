@@ -287,7 +287,10 @@ const Indicators: React.FC<ContainerProps> = () => {
                   />
                 </div>
                 <div
-                  onClick={() => history.push("/home")}
+                  onClick={() => {
+                    history.push("/home");
+                    window.location.reload();
+                  }}
                   style={
                     showLogOut ? { display: "block" } : { display: "none" }
                   }

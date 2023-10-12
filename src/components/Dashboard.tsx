@@ -136,7 +136,7 @@ const Dashboard: React.FC<ContainerProps> = () => {
         <div className="header-name">
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{ marginBottom: 0 }}>
-              <b>Hola, {CapitalizeString(username)}</b>
+              <b>Hola, {username}</b>
             </p>
             <img
               onClick={() => setShowLogOut(!showLogOut)}
@@ -145,7 +145,10 @@ const Dashboard: React.FC<ContainerProps> = () => {
               alt=""
             />
             <div
-              onClick={() => history.push("/home")}
+              onClick={() => {
+                history.push("/home");
+                window.location.reload();
+              }}
               style={showLogOut ? { display: "block" } : { display: "none" }}
             >
               Cerrar Sesion
